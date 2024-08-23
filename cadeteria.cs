@@ -10,19 +10,21 @@ public class Cliente{
     private string direccion;
     private int telefono;
     private string datosDirecc;
-    public Cliente(String nombre,string direccion,int telefono,string datosDirecc){
+    public Cliente(string nombre,string direccion,int telefono,string datosDirecc){
         this.nombre = nombre;
-        this.direccion = direccion;
+        this.Direccion = direccion;
         this.telefono = telefono;
         this.datosDirecc = datosDirecc;  
     }
+
+    public string Direccion { get => direccion; set => direccion = value; }
 }
 
 public class Pedidos{
     private int numPedido;
     private string observacion;
     public Cliente Cliente{get; set;}
-    private  Estado EstadoPedido{get;set;}
+    public  Estado EstadoPedido{get;set;}
     public Pedidos(int numPedido,string observacion,Cliente cliente, Estado estadoPedido){
         this.numPedido = numPedido;
         this.observacion = observacion;
@@ -30,8 +32,11 @@ public class Pedidos{
         this.EstadoPedido = estadoPedido;
     }
 
-public class VerDireccionCliente(){
-    
+public string VerDireccionCliente(){
+      return Cliente.Direccion;
+}
+public class VerDatosCliente(){
+
 }
     
 }
@@ -47,6 +52,9 @@ public class Cadete{
         this.direccion = direccion;
         this.telefono = telefono;
         listadoPedidos = new List<Pedidos>(); // Inicializa la lista de pedidos
+    }
+    public class JornalAcobrar(){
+
     }
    
 }
