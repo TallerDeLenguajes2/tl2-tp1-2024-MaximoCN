@@ -30,10 +30,23 @@ while (true)
     switch (Opcion)
     {
         case "1":
-                Pedidos nuevoPe= Pedidos.crearPedido(1,"PIZZ",cliente,Estado.Aceptado);
-                pedidos.Add(nuevoPe);
+              //  Pedidos nuevoPe= Pedidos.crearPedido(1,"PIZZ",cliente,Estado.Aceptado);
+                //pedidos.Add(nuevoPe);
                 
         break;
+
+        case "2":
+        
+        break;
+
+        case "3":
+
+        break;
+
+        case "4":
+
+        break;
+
 
     }
 }

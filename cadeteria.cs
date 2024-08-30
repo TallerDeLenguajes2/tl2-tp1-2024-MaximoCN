@@ -32,6 +32,9 @@ public class Pedidos{
         this.EstadoPedido = estadoPedido;
     }
     public static Pedidos crearPedido(int numPedido, string observacion, Cliente cliente, Estado estado){
+        Console.ReadLine("Ingrese ")
+        
+
         return new Pedidos(numPedido,observacion,cliente,estado);
     }
 
