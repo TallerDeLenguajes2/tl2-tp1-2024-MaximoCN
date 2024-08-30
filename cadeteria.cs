@@ -13,13 +13,7 @@ public class Cliente{
     private string direccion;
     private string telefono;
     private string datosDirecc;
-    public Cliente(string nombre,string direccion,string telefono,string datosDirecc){
-        this.Nombre = nombre;
-        this.Direccion = direccion;
-        this.Telefono = telefono;
-        this.DatosDirecc = datosDirecc;  
-    }
-
+   
     public string Nombre { get => nombre; set => nombre = value; }
     public string Direccion { get => direccion; set => direccion = value; }
     public string Telefono { get => telefono; set => telefono = value; }
@@ -37,6 +31,10 @@ public class Pedidos{
         this.Cliente = cliente; // Composición: se inicializa en el constructor
         this.EstadoPedido = estadoPedido;
     }
+    public static Pedidos crearPedido(int numPedido, string observacion, Cliente cliente, Estado estado){
+        return new Pedidos(numPedido,observacion,cliente,estado);
+    }
+
 
 public string VerDireccionCliente(){
       return Cliente.Direccion;
@@ -72,7 +70,10 @@ public class Cadeteria{
     private string nombre;
     private string telefono;
     public List<Cadete> listaCadetes{get;set;}
-     public Cadeteria(string nombre, string telefono)
+    public string Nombre { get => nombre; set => nombre = value; }
+    public string Telefono { get => telefono; set => telefono = value; }
+
+    public Cadeteria(string nombre, string telefono)
     {
         this.nombre = nombre;
         this.telefono = telefono;
