@@ -84,25 +84,24 @@ public class Cadeteria{
         Cadeteria cadeteria =null;
 //LEER CADETERIA
         using(StreamReader sr = new StreamReader(Acadeteria)){//inicializa el archivo
-
-        string linea= sr.ReadLine();
-
-        sr.ReadLine();
-        linea=sr.ReadLine();
-
+           string linea= sr.ReadLine();
+           string strr =sr.ReadLine();
+           linea= strr;
         while (linea!=null)
         {
             string[] datos =linea.Split(',');
             string nombre = datos[0];
             string telefono = datos[1];
             cadeteria = new Cadeteria(nombre, telefono);
+             strr=sr.ReadLine();
+             linea= strr;
         }
  }
  //Leer cadetes
         using(StreamReader sr = new StreamReader(Acadetes)){
             string linea= sr.ReadLine();
-            sr.ReadLine();
-            linea=sr.ReadLine();
+           string str=sr.ReadLine();
+            linea=str;
             while (linea!=null)
             {
                 string[] datos= linea.Split(',');
@@ -112,6 +111,8 @@ public class Cadeteria{
                 string telefono= datos[3];
                 Cadete cadete = new Cadete(id, nombre, direccion, telefono);
                 cadeteria.listaCadetes.Add(cadete);
+                str= sr.ReadLine();
+                linea=str;
             }
         
         }
