@@ -14,6 +14,12 @@ public class Cliente{
     private string telefono;
     private string datosDirecc;
    
+     public Cliente(string Nombre, string Direccion)
+    {
+        nombre = Nombre;
+        direccion = Direccion;
+    }
+
     public string Nombre { get => nombre; set => nombre = value; }
     public string Direccion { get => direccion; set => direccion = value; }
     public string Telefono { get => telefono; set => telefono = value; }
@@ -21,21 +27,36 @@ public class Cliente{
 }
 
 public class Pedidos{
+   public static List<Pedidos> listaPedidos= new List<Pedidos>();
+    private static int numpedidosS=0;
     private int numPedido;
     private string observacion;
     public Cliente Cliente{get; set;}
     public  Estado EstadoPedido{get;set;}
-    public Pedidos(int numPedido,string observacion,Cliente cliente, Estado estadoPedido){
-        this.numPedido = numPedido;
-        this.observacion = observacion;
+    public int NumPedido { get => numPedido; set => numPedido = value; }
+    public string Observacion { get => observacion; set => observacion = value; }
+
+    public Pedidos(string observacion,Cliente cliente, Estado estadoPedido){
+        this.NumPedido = ++numpedidosS;
+        this.Observacion = observacion;
         this.Cliente = cliente; // Composición: se inicializa en el constructor
         this.EstadoPedido = estadoPedido;
+        listaPedidos.Add(this);
     }
-    public static Pedidos crearPedido(int numPedido, string observacion, Cliente cliente, Estado estado){
-        Console.ReadLine("Ingrese ")
+    public static Pedidos crearPedido( string observacion, Estado estado){
         
+        Console.WriteLine("Ingrese Nombre del cliente :");
+        string nombrePe=Console.ReadLine();
 
-        return new Pedidos(numPedido,observacion,cliente,estado);
+        Console.WriteLine("Ingrese la direccion del cliente:");
+        string direcPe=Console.ReadLine();
+        
+        Cliente cliente = new Cliente(nombrePe,direcPe);
+
+        Console.WriteLine("Ingrese observacion del pedido :");
+        observacion=Console.ReadLine();
+
+        return new Pedidos(observacion,cliente,estado);
     }
 
 

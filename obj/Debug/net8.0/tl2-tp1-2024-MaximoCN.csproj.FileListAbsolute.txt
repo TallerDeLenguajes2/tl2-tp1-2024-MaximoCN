@@ -27,3 +27,4 @@ C:\Users\Alumno\Desktop\tp2\tl2-tp1-2024-MaximoCN\obj\Debug\net8.0\refint\tl2-tp
 C:\Users\Alumno\Desktop\tp2\tl2-tp1-2024-MaximoCN\obj\Debug\net8.0\tl2-tp1-2024-MaximoCN.pdb
 C:\Users\Alumno\Desktop\tp2\tl2-tp1-2024-MaximoCN\obj\Debug\net8.0\tl2-tp1-2024-MaximoCN.genruntimeconfig.cache
 C:\Users\Alumno\Desktop\tp2\tl2-tp1-2024-MaximoCN\obj\Debug\net8.0\ref\tl2-tp1-2024-MaximoCN.dll
+C:\Users\ROG BY NG\Desktop\Taller2\TP1\tl2-tp1-2024-MaximoCN\obj\Debug\net8.0\tl2-tp1-2024-MaximoCN.sourcelink.json
