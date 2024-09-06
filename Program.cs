@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using sistemaCadt;
 using parteJson;
+using System.Data.Common;
 
 string ArchivoDeCadetes="Acadetes.csv";
 string ArchivoDeCadeteria="Acadeteria.csv";
@@ -27,10 +28,11 @@ while (true)
         Pedidos NuevoPedido=Pedidos.crearPedido("obs incial",estadoInicial);
         ManejoLista.Add(NuevoPedido);
         
-        
         break;
 
         case "2":
+        
+
         
 
         
@@ -67,7 +69,11 @@ while (true)
             if (linea1!= null)
             {
                 var values = linea1.Split(",");
-            
+                
+                    
+
+                
+    
             }
         }
     }

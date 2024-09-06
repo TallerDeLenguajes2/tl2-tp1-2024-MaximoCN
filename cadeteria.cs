@@ -60,6 +60,7 @@ public class Pedidos{
     }
 
 
+
 public string VerDireccionCliente(){
       return Cliente.Direccion;
 }
@@ -93,7 +94,7 @@ public class Cadete{
 public class Cadeteria{
     private string nombre;
     private string telefono;
-    public List<Cadete> listaCadetes{get;set;}
+    public List<Cadete> Cadetes{get;set;}
     public string Nombre { get => nombre; set => nombre = value; }
     public string Telefono { get => telefono; set => telefono = value; }
 
@@ -101,8 +102,14 @@ public class Cadeteria{
     {
         this.nombre = nombre;
         this.telefono = telefono;
-        listaCadetes = new List<Cadete>(); // Inicializa la lista de cadetes
+     
     }
+    
+     public Cadeteria()
+    {
+        Cadetes = new List<Cadete>();
+    }
+    
 
     public static Cadeteria CargarCsv(string Acadeteria,string Acadetes){
         Cadeteria cadeteria =null;
@@ -134,7 +141,7 @@ public class Cadeteria{
                 string direccion= datos[2];
                 string telefono= datos[3];
                 Cadete cadete = new Cadete(id, nombre, direccion, telefono);
-                cadeteria.listaCadetes.Add(cadete);
+                cadeteria.Cadetes.Add(cadete);
                 str= sr.ReadLine();
                 linea=str;
             }
@@ -143,5 +150,21 @@ public class Cadeteria{
         return cadeteria;
 
     }
-     
- }
+    public static bool CambiarCadete(int numPedido,int id, List<Pedidos> listapedidos){
+        Pedidos pedido=null;
+        Cadete cadete = null;
+        foreach (var p in listapedidos)
+        {
+            p.NumPedido= numPedido;
+            pedido=p; 
+
+        }
+
+        foreach (var c in Cadete)
+        {
+            
+        }
+
+    }
+}
+ 
