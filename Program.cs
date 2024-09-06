@@ -7,7 +7,7 @@ string ArchivoDeCadeteria="Acadeteria.csv";
 
 Cadeteria miCadeteria= Cadeteria.CargarCsv(ArchivoDeCadeteria,ArchivoDeCadetes);
 List<Pedidos> ManejoLista= new List<Pedidos>();
-csv listas= new csv();
+
 
 while (true)
 {
@@ -32,6 +32,8 @@ while (true)
 
         case "2":
         
+
+        
         break;
 
         case "3":
@@ -54,6 +56,21 @@ while (true)
 
 }
     string archivoDePedidos = "pedidos.csv";
+    using(var reader = new StreamReader(archivoDePedidos)){
+        var linea = reader.ReadLine();
+        if(linea!= null){
+            
+        }
+        while (!reader.EndOfStream)
+        {
+            var linea1= reader.ReadLine();
+            if (linea1!= null)
+            {
+                var values = linea1.Split(",");
+            
+            }
+        }
+    }
     csv.GuardarPedidosEnCsv(archivoDePedidos, ManejoLista);
 
 
